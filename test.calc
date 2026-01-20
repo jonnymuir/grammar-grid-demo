@@ -1,0 +1,18 @@
+{
+  selectedRowId: 'sal_01',
+  activeField: 'value', // Tracks which specific cell property Monaco is editing
+  rows: [
+      { id: 'header_1', label: 'Member Core Data', isHeader: true },
+      { id: 'sal_01', label: 'Final Pensionable Salary', source: 'DB', type: 'Number', note: 'Based on last 36 months average' },
+      { id: 'srv_01', label: 'Total Qualifying Service', source: 'MANUAL', type: 'Years', note: 'Checked against paper records 2024' },
+      { id: 'header_2', label: 'Benefit Calculation', isHeader: true },
+      { id: 'acc_01', label: 'Accrual Rate', source: 'CONST', type: 'Factor', note: 'Standard 1/60th Scheme Rule' },
+      { id: 'ret_01', label: 'Annual Pension', source: 'CALC', type: 'Currency', note: '' }
+  ],
+  values: {
+      'sal_01': '=data_dictionary(final_salary)',
+      'srv_01': '24.5',
+      'acc_01': '0.01667',
+      'ret_01': '=SUM(sal_01 * srv_01 * acc_01)'
+  }
+}
