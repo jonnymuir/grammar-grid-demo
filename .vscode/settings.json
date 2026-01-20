@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "*.calc": "calculation-language"
+    },
+    "json.validate.enable": true,
+    "json.format.enable": true,
+    "[calculation-language]": {
+        "json.validate.enable": false,
+        "json.format.enable": false,
+        "editor.defaultFormatter": "jonnymuir.vscode-grammar-grid",
+        "editor.formatOnSave": false,
+        "editor.quickSuggestions": {
+            "strings": true,
+            "other": true,
+            "comments": false
+        }
+    }
+}
